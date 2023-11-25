@@ -102,7 +102,7 @@ def draw_boxes_OCR_output(image,height):
     cv.imshow('Boxes', image)
 
 
-compImage = cv.imread('Red_Cross_White_9.jpeg')
+compImage = cv.imread('RealWork/Red_Cross_White_9.jpeg')
 rotated_image = rotate_image2(compImage)
 rotated_image2 = preprocess_gray_smooth_threshold(rotated_image)
 cv.imshow('Rotated',rotated_image2)

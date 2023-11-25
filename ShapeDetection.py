@@ -198,6 +198,7 @@ def determine_shape_type(contour, img=False, sensitivity=0.004, deadzone=4):  # 
                    abs(abs(approx[i][0][0] - last[0]) - abs(approx[i][0][1] - last[1]))
             distances[i] = dist
         last = approx[i][0]
+
     dist = 1.4 * min(abs(approx[0][0][0] - last[0]), abs(approx[0][0][1] - last[1])) + \
            abs(abs(approx[0][0][0] - last[0]) - abs(approx[0][0][1] - last[1]))
     distances[0] = dist

@@ -49,7 +49,7 @@ def preprocess_gray_blur_denoise_thresh_morph(image):
 def resize_image(image,h,w):
     resizedImage = cv.resize(image.copy(),(h,w),cv.BORDER_DEFAULT)
 
-test_image = cv.imread('Red_Cross_White_9.jpeg')
+test_image = cv.imread('RealWork/Red_Cross_White_9.jpeg')
 resized_image = resize_image(test_image,500,500)
 preprocessed_image = preprocess_gray_blur_denoise_thresh_morph(resized_image)
 latitude_object,longitude_object = geo_location(resized_image,preprocessed_image,100,2650,(np.pi/3),(100,150))

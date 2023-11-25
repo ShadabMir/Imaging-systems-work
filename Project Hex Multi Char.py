@@ -42,8 +42,10 @@ def geo_location(orgimage,image,altitude,GSD,bearingAngle,drone_location,maximum
     for c in contours:
         b = cv.boundingRect(c)
         x,y,w,h = b
-        if ((w*h) > 3150) & ((w*h)<3220):
-
+        if ((w*h) > 419) & ((w*h)<425):
+            rectImage = cv.rectangle(image, (x,y), (x+w,y+h), color=(200,230,255), thickness=2)
+            cv.imshow('Rect',rectImage)
+            print("a")
             if determine_shape_type(c) == "UNKNOWN":
                 print('x')
             else:
@@ -51,7 +53,7 @@ def geo_location(orgimage,image,altitude,GSD,bearingAngle,drone_location,maximum
                 contour_centre.append((y+(h/2)))
 
         else:
-            print('wwe')
+           y=0
     image_centre = (250,250)
     print(contour_centre,'Contour centre')
     L = np.sqrt((contour_centre[0]-image_centre[0])**2 + (contour_centre[1]-image_centre[1])**2)
@@ -62,7 +64,7 @@ def geo_location(orgimage,image,altitude,GSD,bearingAngle,drone_location,maximum
     return lat2,lon2
 
 
-image = cv.imread('Red_Cross_White_9.jpeg')
+image = cv.imread('RealWork/Red_Cross_White_9.jpeg')
 resized_image = cv.resize(image.copy(),(500,500),cv.BORDER_DEFAULT)
 gray_image = cv.cvtColor(resized_image,cv.COLOR_BGR2GRAY)
 blur_image = cv.bilateralFilter(gray_image,5,20,20,cv.BORDER_DEFAULT)
