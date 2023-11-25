@@ -27,11 +27,10 @@ def points_close_enough(pointSet1,pointSet2):
     return True
 
 
-def getSkewAngle2(cvImage,upperWidth,upperHeight,lowerheight,lowerwidth,lowest_point_rect = 0):
+def getSkewAngle2(cvImage,upperArea,LowerArea,lowest_point_rect = 0):
 
     newImage = cvImage.copy()
-    resized_image = cv.resize(newImage, (500, 500), interpolation=cv.INTER_LINEAR)
-    threshold = preprocess_gray_nlmeans_threshold(resized_image)
+    threshold = preprocess_gray_nlmeans_threshold(newImage)
 
     contours, hierarchy = cv.findContours(
         threshold, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE
@@ -42,12 +41,7 @@ def getSkewAngle2(cvImage,upperWidth,upperHeight,lowerheight,lowerwidth,lowest_p
         rect = cv.boundingRect(c)
         x, y, w, h = rect
 
-        if ((w * h) < (upperWidth * upperHeight)) & ((w * h) > (lowerwidth * lowerheight)):
-
-            if determine_shape_type(c) == 'UNKNOWM':
-                print('x')
-            else:
-
+        if ((w * h) < (upperArea)) & ((w * h) > (LowerArea)):
                 target_contour.append(c)
     x,y,w,h = cv.boundingRect(target_contour[0])
     area_max = cv.contourArea(target_contour[0])
@@ -55,34 +49,29 @@ def getSkewAngle2(cvImage,upperWidth,upperHeight,lowerheight,lowerwidth,lowest_p
     box_min = cv.boxPoints(minimum_area_rect)
     box_min = np.int32(box_min)
     area_min = cv.contourArea(box_min,True)
-    if (area_max-area_min) < 0.01:
-        if points_close_enough:
-            return newImage
+    print(area_min)
+    print(area_max)
+    if (area_min-area_max) < 0.01:
+        print("yes")
+        return newImage
     else:
+        print("no")
 
-        M = cv.getRotationMatrix2D((cvImage.shape[0]/2,cvImage.shape[1]/2),1,1.0)
-        newImage = cv.warpAffine(cvImage,M,(cvImage.shape[0]/2,cvImage.shape[1]/2))
-        getSkewAngle2(newImage,upperWidth,upperHeight,lowerheight,lowerwidth,0)
-
-
-
+        M = cv.getRotationMatrix2D((newImage.shape[0]/2,newImage.shape[1]/2),1,1.0)
+        newImage = cv.warpAffine(cvImage,M,(cvImage.shape[0],cvImage.shape[1]))
+        getSkewAngle2(newImage,upperArea+100,LowerArea-100,0)
 
 
-    pass
 
-def rotate_image(cvImage,target,centre, angle: float):
-    print('e')
-    newImage = cvImage.copy()
-    newImage = cv.resize(newImage.copy(),(500,500),interpolation=cv.INTER_LINEAR)
-    (h, w) = (newImage.shape[0],newImage.shape[1])
-    M = cv.getRotationMatrix2D(centre, angle, 0.8)
-    newImage = cv.warpAffine(newImage, M, (h,w))
-    cv.imshow('new image test',newImage)
-    return newImage
+
+
+
+
+
 
 def rotate_image2(image):
     print('d')
-    newImage = getSkewAngle2(image)
+    newImage = getSkewAngle2(image,425,419)
     return newImage
 
 def draw_boxes_OCR_output(image,height):
@@ -104,26 +93,29 @@ def draw_boxes_OCR_output(image,height):
 def rotate_180(image,centre):
     (h,w) = image.shape[:2]
     M = cv.getRotationMatrix2D(centre,180,1.0)
-    neeImage = cv.warpAffine(image,M,(h,w))
-compImage = cv.imread('Red_Cross_White_9.jpeg')
-rotated_image = rotate_image2(compImage)
-rotated_image2 = preprocess_gray_smooth_threshold(rotated_image)
-cv.imshow('Rotated',rotated_image2)
-data = pytesseract.image_to_data(rotated_image2,output_type=dict,config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVBNM0987654321')
+    newImage = cv.warpAffine(image,M,(h,w))
+    return newImage
+
+compImage = cv.imread('RealWork/Red_Cross_White_9.jpeg')
+resized_image = cv.resize(compImage, (500, 500), interpolation=cv.INTER_LINEAR)
+rotated_image = rotate_image2(resized_image)
+
+cv.imshow('Rotated',rotated_image)
+"""data = pytesseract.image_to_data(rotated_image,output_type=dict,config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVBNM0987654321')
 confidence1 = data['conf']
-rotated_image_180 = rotate_180(rotated_image2)
+rotated_image_180 = rotate_180(rotated_image)
 data2 = pytesseract.image_to_data(rotated_image_180,output_type=dict,config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVB')
 confidence2 = data2['conf']
 if confidence1>confidence2:
 
-    print(pytesseract.image_to_string(rotated_image2,config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVBNM09876054321',timeout=2000))
-    h, w = rotated_image2.shape[:2]
-    draw_boxes_OCR_output(rotated_image2,h)
+    print(pytesseract.image_to_string(rotated_image,config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVBNM09876054321',timeout=2000))
+    h, w = rotated_image.shape[:2]
+    draw_boxes_OCR_output(rotated_image,h)
 if confidence2 > confidence1:
     print(pytesseract.image_to_string(rotated_image_180,
                                       config='--psm 10 --oem 3-c tessedit_char_whitelist=QWERTYUIOPASDFGHJKLZXCVBNM09876054321',
                                       timeout=2000))
     h, w = rotated_image_180.shape[:2]
-    draw_boxes_OCR_output(rotated_image_180, h)
+    draw_boxes_OCR_output(rotated_image_180, h)"""
 
 cv.waitKey(0)
