@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec13d300-e11c-409e-8b9a-506fd9abff5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Imaging-systems-work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Imaging-systems-work.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealWork/Background Remover Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/Background Remover Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealWork/DeskewingMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/DeskewingMethods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealWork/DeskewingPIL.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/DeskewingPIL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealWork/PreprocessingMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/PreprocessingMethods.py" afterDir="false" />
-    </list>
+    <list default="true" id="ec13d300-e11c-409e-8b9a-506fd9abff5f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700934471819</updated>
       <workItem from="1700934473581" duration="14091000" />
-      <workItem from="1700950033561" duration="15200000" />
+      <workItem from="1700950033561" duration="15521000" />
     </task>
     <servers />
   </component>
