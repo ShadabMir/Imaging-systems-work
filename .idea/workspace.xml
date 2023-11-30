@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec13d300-e11c-409e-8b9a-506fd9abff5f" name="Changes" comment="" />
+    <list default="true" id="ec13d300-e11c-409e-8b9a-506fd9abff5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Imaging-systems-work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Imaging-systems-work.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealWork/Background Remover Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/Background Remover Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealWork/DeskewingMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/DeskewingMethods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealWork/DeskewingPIL.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/DeskewingPIL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealWork/PreprocessingMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealWork/PreprocessingMethods.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,12 +36,15 @@
       </map>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2Yg5dpvYcQVlcCvTeDIF9j4VM4v" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,6 +66,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zahid\Imaging-systems-work\RealWork" />
       <recent name="C:\Users\asgha\OneDrive\Documents\GitHub\Imaging-systems-work\RealWork" />
     </key>
   </component>
@@ -66,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700934471819</updated>
       <workItem from="1700934473581" duration="14091000" />
+      <workItem from="1700950033561" duration="15200000" />
     </task>
     <servers />
   </component>
@@ -73,12 +87,15 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$Background_Remover_Test.coverage" NAME="Background Remover Test Coverage Results" MODIFIED="1701277809454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RealWork" />
     <SUITE FILE_PATH="coverage/Imaging_systems_work$DeSkewingImage2.coverage" NAME="DeSkewingImage2 Coverage Results" MODIFIED="1700948410804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Imaging_systems_work$Project_Hex_Multi_Char.coverage" NAME="Project Hex Multi Char Coverage Results" MODIFIED="1700948015675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Imaging_systems_work$Character_Recognition.coverage" NAME="Character Recognition Coverage Results" MODIFIED="1700949327955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RealWork" />
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$Project_Hex.coverage" NAME="Project Hex Coverage Results" MODIFIED="1700934953264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$DeskewingMethods.coverage" NAME="DeskewingMethods Coverage Results" MODIFIED="1701278413315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RealWork" />
     <SUITE FILE_PATH="coverage/Imaging_systems_work$Testing_shape_detection.coverage" NAME="Testing shape detection Coverage Results" MODIFIED="1700946002315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Imaging_systems_work$DeSkewingImage.coverage" NAME="DeSkewingImage Coverage Results" MODIFIED="1700934745311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Imaging_systems_work$Project_Hex.coverage" NAME="Project Hex Coverage Results" MODIFIED="1700934953264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Imaging_systems_work$ShapeDetection.coverage" NAME="ShapeDetection Coverage Results" MODIFIED="1700939314017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$PreprocessingMethods.coverage" NAME="PreprocessingMethods Coverage Results" MODIFIED="1701279319145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RealWork" />
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$Project_Hex_Multi_Char.coverage" NAME="Project Hex Multi Char Coverage Results" MODIFIED="1700948015675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Imaging_systems_work$Character_Recognition.coverage" NAME="Character Recognition Coverage Results" MODIFIED="1701279324673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RealWork" />
   </component>
 </project>
